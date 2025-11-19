@@ -5,62 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NURJIHANA – GET TO KNOW ME</title>
 
-  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
-  <!-- External CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="min-h-screen">
+  <!-- Sticky Header -->
+  <header class="sticky-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div class="flex items-center justify-between">
+        
+        <a href="#" class="text-3xl font-extrabold tracking-widest uppercase text-gray-900 border-b-4 border-black pb-1">
+          NURJIHANA . GET TO KNOW ME
+        </a>
+        
+        <nav class="hidden md:flex space-x-6 text-sm font-semibold uppercase">
+          <a href="#intro" class="nav-link">Intro</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#hobbies" class="nav-link">Hobbies</a>
+          <a href="#contact" class="bg-black text-white px-4 py-2 rounded-full shadow-lg hover:bg-gray-800 transition duration-150">Get In Touch</a>
+        </nav>
 
-  <!-- HEADER / NAVIGATION -->
-  <header class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-    <div class="flex items-center justify-between">
+        <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-gray-800 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
       
-      <!-- Logo/Title -->
-      <a href="#" class="text-3xl font-extrabold tracking-widest uppercase text-gray-900 border-b-4 border-black pb-1">
-        	NURJIHANA . GET TO KNOW ME
-      </a>
-      
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex space-x-6 text-sm font-semibold uppercase">
-        <a href="#intro" class="text-gray-600 hover:text-black transition duration-150">Intro</a>
-        <a href="#hobbies" class="text-gray-600 hover:text-black transition duration-150">Hobbies</a>
-        <a href="#contact" class="text-gray-600 hover:text-black transition duration-150">Contact</a>
-        <a href="#contact" class="bg-black text-white px-4 py-2 rounded-full shadow-lg hover:bg-gray-800 transition duration-150">Get In Touch</a>
-      </nav>
-
-      <!-- Mobile Menu Button -->
-      <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-gray-800 focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-      </button>
-    </div>
-    
-    <!-- Mobile Menu Dropdown -->
-    <div id="mobile-menu" class="hidden md:hidden mt-4 bg-white rounded-xl shadow-xl p-4 space-y-2">
-      <a href="#intro" class="block text-gray-700 hover:text-pink-600 font-medium">Intro</a>
-      <a href="#hobbies" class="block text-gray-700 hover:text-pink-600 font-medium">Hobbies</a>
-      <a href="#contact" class="block text-gray-700 hover:text-pink-600 font-medium">Contact</a>
-      <a href="#contact" class="block bg-pink-500 text-white text-center py-2 rounded-full mt-2">Get In Touch</a>
+      <div id="mobile-menu" class="hidden md:hidden mt-4 bg-white rounded-xl shadow-xl p-4 space-y-2">
+        <a href="#intro" class="mobile-nav-link">Intro</a>
+        <a href="#education" class="mobile-nav-link">Education</a>
+        <a href="#experience" class="mobile-nav-link">Experience</a>
+        <a href="#hobbies" class="mobile-nav-link">Hobbies</a>
+        <a href="#contact" class="block bg-pink-500 text-white text-center py-2 rounded-full mt-2">Get In Touch</a>
+      </div>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
   <main id="intro" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-16">
     <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
       
-      <!-- Image + Hook -->
       <div class="relative bg-white p-6 rounded-3xl shadow-2xl">
-        <img src="gambarjihan.jpg" 
+        <img src="images/gambarjihan.jpg" 
              alt="Nurjihana Profile" 
-             class="w-full h-auto rounded-xl object-cover">
+             class="w-full h-auto rounded-xl object-cover max-h-[500px]"> <!-- Added max-height constraint -->
 
         <div class="absolute bottom-[-1rem] left-4 bg-white p-4 rounded-3xl shadow-xl w-11/12">
           <h1 class="text-2xl sm:text-3xl font-bold text-gray-900">
@@ -69,15 +61,14 @@
           <p class="text-sm text-gray-600 mt-2">
             A space for my latest projects, insights, and personal stories.
           </p>
-          <a href="#hobbies" class="inline-block mt-3 px-6 py-2 text-white rounded-full text-sm"
-             style="background-color: var(--primary-pink);">
+          <a href="#hobbies" class="btn-primary-pink">
             Learn More Below
           </a>
         </div>
       </div>
 
-      <!-- Blob Section -->
-      <div class="relative min-h-[400px] flex items-center justify-center mt-16 md:mt-0">
+      <!-- CHANGED: Reduced min-height from 500px to 400px and added max-height -->
+      <div class="relative min-h-[400px] max-h-[500px] flex items-center justify-center mt-16 md:mt-0">
         <div class="blob-pink w-full h-full absolute"></div>
         
         <div class="relative p-8 text-white max-w-sm text-center">
@@ -85,12 +76,12 @@
             NURJIHANA: <br><span class="text-yellow-200">A QUICK INTRODUCTION</span>
           </h2>
           <p class="mt-4 text-sm font-light">
-            Assalamualaikum. My name is Nurjihana Binti Jazule.
-            I am 20 years old and was born in Ipoh, Perak. I am the youngest of three siblings. 
+            Assalamualaikum. My name is **Nurjihana Binti Jazule**.
+            I am 20 years old and was born in **Ipoh, Perak**. I am the youngest of three siblings. 
             I enjoy creating art, spending time with my friends, and I studied both art and business in school—achieving excellent results in both.
           </p>
-          <a href="#hobbies" class="mt-6 inline-block text-sm font-bold uppercase text-gray-900 bg-white px-6 py-3 rounded-full shadow-lg hover:bg-gray-100">
-            See My Hobbies
+          <a href="#education" class="mt-6 inline-block text-sm font-bold uppercase text-gray-900 bg-white px-6 py-3 rounded-full shadow-lg hover:bg-gray-100">
+            See My Background
           </a>
         </div>
       </div>
@@ -98,12 +89,10 @@
     </div>
   </main>
 
-  <!-- SPICY SECTION -->
-  <section class="py-24" style="background-color: var(--primary-pink);">
+  <section class="py-24 bg-primary-pink">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="relative spicy-background p-8 sm:p-12 md:p-16 rounded-3xl shadow-inner border-4 border-black">
-        <p class="text-3xl sm:text-5xl md:text-7xl font-black uppercase"
-           style="color: var(--secondary-yellow); text-shadow: 4px 4px 0 black;">
+        <p class="text-3xl sm:text-5xl md:text-7xl font-black uppercase spicy-text-shadow">
           LIFE IS MEANT TO BE BOLD,
           <span class="text-white">LIVED WITH PASSION,</span>
           AND ALWAYS A LITTLE BIT <span class="text-red-500 italic">SPICY.</span>
@@ -111,32 +100,123 @@
       </div>
     </div>
   </section>
+  
+  <section id="education" class="pt-20 pb-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-black uppercase text-gray-900 mb-10 text-center">
+        <span class="border-b-4 border-red-500 pb-1">MY EDUCATION</span>
+      </h2>
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        
+        <div class="p-8 bg-gray-50 rounded-2xl shadow-xl border-t-4 border-black">
+          <p class="text-sm font-semibold uppercase text-red-500 mb-1">2023 - Present</p>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">
+            Diploma in Art & Design (Graphic Design)
+          </h3>
+          <p class="text-lg text-gray-700 font-medium mb-4">
+            Universiti Teknologi MARA (UiTM) Cawangan Perak
+          </p>
+          <p class="text-gray-600">
+            Currently pursuing my diploma, focusing on **digital illustration**, **branding**, and **visual communication**. Developing skills in professional design software and creative problem-solving.
+          </p>
+        </div>
 
-  <!-- HOBBIES SECTION -->
+        <div class="p-8 bg-gray-50 rounded-2xl shadow-xl border-t-4 border-black">
+          <p class="text-sm font-semibold uppercase text-red-500 mb-1">2021 - 2022</p>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">
+            Matriculation Certificate (Business Management)
+          </h3>
+          <p class="text-lg text-gray-700 font-medium mb-4">
+            Kolej Matrikulasi Perak (KMP)
+          </p>
+          <p class="text-gray-600">
+            Completed a one-year program with a strong foundation in **Business**, **Accounting**, and **Mathematics**. Developed key analytical and organisational skills.
+          </p>
+        </div>
+
+      </div>
+      
+      <div class="text-center mt-12">
+        <a href="#experience" class="inline-block text-sm font-bold uppercase text-white bg-black px-8 py-3 rounded-full shadow-lg hover:bg-gray-800">
+          Next: My Work Experience
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <section id="experience" class="pt-20 pb-24 bg-secondary-yellow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-black uppercase text-gray-900 mb-10 text-center">
+        <span class="border-b-4 border-red-500 pb-1">PROFESSIONAL EXPERIENCE</span>
+      </h2>
+      
+      <div class="relative border-l-4 border-gray-300 ml-4 pl-8 space-y-12">
+        
+        <div class="relative">
+          <div class="absolute w-4 h-4 bg-black rounded-full -left-10 top-1"></div>
+          <p class="text-sm font-semibold uppercase text-black mb-1">Feb - April 2023</p>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">
+            Internship (Administrative Support)
+          </h3>
+          <p class="text-lg text-gray-700 font-medium mb-4">
+            **Pejabat Daerah & Tanah Ipoh** (Ipoh District and Land Office)
+          </p>
+          <ul class="list-disc space-y-2 text-gray-700">
+            <li>Learned how a **government office operates daily** through direct observation and assistance.</li>
+            <li>Gained confidence in a professional work environment by handling sensitive documents and public enquiries.</li>
+            <li>Understood different divisions and their roles in local administration.</li>
+            <li>Improved skills in documentation, data **accuracy**, and **organisation** of records.</li>
+          </ul>
+        </div>
+        
+        <div class="relative">
+          <div class="absolute w-4 h-4 bg-black rounded-full -left-10 top-1"></div>
+          <p class="text-sm font-semibold uppercase text-black mb-1">June - July 2022</p>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">
+            Part-Time Crew
+          </h3>
+          <p class="text-lg text-gray-700 font-medium mb-4">
+            Local F&B Outlet, Ipoh
+          </p>
+          <ul class="list-disc space-y-2 text-gray-700">
+            <li>Managed **customer service** and handled cash transactions accurately during peak hours.</li>
+            <li>Collaborated with a team to ensure smooth daily operations and stock management.</li>
+            <li>Developed strong **communication** and **time management** skills in a fast-paced environment.</li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <div class="text-center mt-12">
+        <a href="#hobbies" class="inline-block text-sm font-bold uppercase text-white bg-black px-8 py-3 rounded-full shadow-lg hover:bg-gray-800">
+          My Hobbies & Interests
+        </a>
+      </div>
+    </div>
+  </section>
+
   <section id="hobbies" class="pt-20 pb-24 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-4xl font-black uppercase text-gray-900 mb-10 text-center">
-        <span class="border-b-4 border-red-500 pb-1">MY FAVORITE THINGS </span>
+        <span class="border-b-4 border-red-500 pb-1">MY FAVORITE THINGS</span>
       </h2>
       <div class="grid md:grid-cols-2 gap-12 items-center">
         
         <div>
           <h3 class="text-3xl font-bold text-gray-900 mb-4">
-            My Passion: Coffee Hunting with Friends
+            My Passion: Coffee Hunting with Friends ☕
           </h3>
           <p class="text-gray-600 mb-4 text-lg">
-            Coffee hunting is my favourite hobby. I enjoy exploring new cafés, enjoying unique drinks, 
-            and spending quality time with friends.
+            **Coffee hunting** is my favourite hobby. I enjoy exploring new **cafés**, enjoying unique drinks, and spending quality time with friends. It's a great way to discover local gems and appreciate aesthetic spaces.
           </p>
 
           <h3 class="text-3xl font-bold text-gray-900 mt-8 mb-4">
-            My Experience: Internship at Pejabat Daerah & Tanah Ipoh
+            Creative Outlets: Art & Design 🎨
           </h3>
           <ul class="list-disc list-inside space-y-2 text-gray-700 pl-4">
-            <li>Learned how a government office operates daily.</li>
-            <li>Gained confidence in a professional work environment.</li>
-            <li>Understood different divisions and their roles.</li>
-            <li>Improved skills in documentation, accuracy & organization.</li>
+            <li>I enjoy creating both traditional and digital **artworks**.</li>
+            <li>Continuously learning new graphic design techniques to express creativity.</li>
+            <li>Believing in the power of visual storytelling.</li>
           </ul>
 
           <a href="#contact" class="mt-6 inline-block text-sm font-bold uppercase text-white bg-black px-8 py-3 rounded-full shadow-lg hover:bg-gray-800">
@@ -144,16 +224,22 @@
           </a>
         </div>
 
-        <!-- Images -->
-        <div class="rounded-2xl overflow-hidden shadow-2xl">
-          <img src="gambarjihandkk.jpg" class="w-full h-auto object-cover hover:scale-[1.20] transition duration-300">
+        <div class="rounded-2xl overflow-hidden shadow-2xl video-hover-scale">
+          <video src="C:\Users\User\Desktop\IMD318 WEBSITE\videojihan.mp4" 
+                 loop 
+                 autoplay 
+                 muted 
+                 playsinline 
+                 class="w-full h-auto object-cover"
+                 alt="Video of Nurjihana and friends enjoying coffee">
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="pt-16 pb-20" style="background-color: var(--secondary-yellow);">
+  <section id="contact" class="pt-16 pb-20 bg-secondary-yellow">
     <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center mb-10">
@@ -163,14 +249,12 @@
 
       <div class="space-y-4">
 
-        <!-- Email -->
         <a href="mailto:jihananur2@gmail.com"
-           class="contact-btn" style="background-color: var(--primary-pink);">
+           class="contact-btn bg-primary-pink">
           <span>EMAIL: jihananur2@gmail.com</span>
         </a>
 
-        <!-- Instagram -->
-        <a href="#" class="contact-btn" style="background-color: #C13584;">
+        <a href="https://instagram.com/jihanajazlee" class="contact-btn bg-instagram-pink">
           <span>INSTAGRAM: @jihanajazlee</span>
         </a>
 
@@ -178,19 +262,73 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="bg-gray-900 text-white py-10">
     <div class="max-w-7xl mx-auto px-4 text-center">
       <p class="text-lg font-bold uppercase mb-2">Connect with Nurjihana</p>
-      <p class="text-sm text-gray-400">&copy; 2024. All Rights Reserved. Built with <span style="color: var(--primary-pink);">&hearts;</span>.</p>
+      <p class="text-sm text-gray-400">&copy; 2024. All Rights Reserved. Built with <span class="text-primary-pink">&hearts;</span>.</p>
     </div>
   </footer>
 
-  <!-- Mobile Menu Script -->
+  <!-- Audio Button -->
+  <button id="audio-button" class="audio-button">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072M12 6a8 8 0 010 12m-4.5-9.5L12 3v18l-4.5-4.5H4a1 1 0 01-1-1v-7a1 1 0 011-1h3.5z" />
+    </svg>
+  </button>
+
+  <!-- Scroll to Top Button -->
+  <button id="scroll-to-top" class="scroll-to-top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
+  <!-- Audio Element -->
+  <audio id="background-audio" loop>
+    <source src="One Direction - Perfect (Official Video).mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
   <script>
+    // Mobile menu toggle
     const button = document.getElementById('mobile-menu-button');
     const menu = document.getElementById('mobile-menu');
     button.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+    // Audio button functionality
+    const audioButton = document.getElementById('audio-button');
+    const audio = document.getElementById('background-audio');
+    let isPlaying = false;
+
+    audioButton.addEventListener('click', () => {
+      if (isPlaying) {
+        audio.pause();
+        audioButton.classList.remove('playing');
+      } else {
+        audio.play().catch(e => console.log('Audio play failed:', e));
+        audioButton.classList.add('playing');
+      }
+      isPlaying = !isPlaying;
+    });
+
+    // Scroll to top functionality
+    const scrollToTopButton = document.getElementById('scroll-to-top');
+    
+    scrollToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Show/hide scroll to top button based on scroll position
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        scrollToTopButton.classList.add('visible');
+      } else {
+        scrollToTopButton.classList.remove('visible');
+      }
+    });
   </script>
 
 </body>
